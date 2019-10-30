@@ -2,17 +2,15 @@
 
 - name: install tomcat8
   apt:
-    name: "{{ item }}"
+    name: u'{{ tomcat8_packages }}'
     state: present
     cache_valid_time: 3600
-  with_items: "{{ tomcat8_packages }}"
 
 - name: install tomcat8 admin
   apt:
-    name: "{{ item }}"
+    name: u'{{ tomcat8_admin_packages }}'
     state: present
     cache_valid_time: 3600
-  with_items: "{{ tomcat8_admin_packages }}"
   when: tomcat8_admin_install
 
 - name: start tomcat8
