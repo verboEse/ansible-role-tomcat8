@@ -55,3 +55,7 @@ tomcat8_java_opts:
 # tomcat8_version: 8.5.27
 # tomcat_binary_url:  "http://www-eu.apache.org/dist/tomcat/tomcat-8/v{{ tomcat8_version }}/bin/apache-tomcat-{{ tomcat8_version }}.tar.gz"
 # tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat8_version }}"
+
+# Override Tomcat's default UMASK of 0027
+# old behaviour up to jessie was umask 0022
+# tomcat8_umask: 0022
