@@ -58,4 +58,4 @@ tomcat8_java_opts:
 
 # Override Tomcat's default UMASK of 0027
 # old behaviour up to jessie was umask 0022
-# tomcat8_umask: 0022
+tomcat8_umask: 0027
